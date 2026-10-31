@@ -397,6 +397,118 @@ footer {
     font-size: 12px;
     color: #6b706e;
 }
+
+/* --- CSS-only dark mode switch --- */
+.theme-toggle-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-flex;
+    flex: 0 0 46px;
+    width: 46px;
+    height: 26px;
+    align-items: center;
+    border: 1px solid var(--accent-gold);
+    border-radius: 999px;
+    background: #e8e2d7;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.theme-switch::before {
+    position: absolute;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--text-dark);
+    content: "";
+    transition: transform 0.25s ease;
+}
+
+.theme-switch-icon {
+    position: absolute;
+    z-index: 1;
+    left: 7px;
+    color: #fff;
+    font: 12px/1 "Segoe UI", sans-serif;
+    pointer-events: none;
+}
+
+.theme-switch-icon::before {
+    content: "☾";
+}
+
+.theme-toggle-input:checked + .theme-switch {
+    background: #393a35;
+}
+
+.theme-toggle-input:checked + .theme-switch::before {
+    transform: translateX(20px);
+}
+
+.theme-toggle-input:checked + .theme-switch .theme-switch-icon {
+    left: 28px;
+}
+
+.theme-toggle-input:checked + .theme-switch .theme-switch-icon::before {
+    content: "☀";
+}
+
+.theme-toggle-input:focus-visible + .theme-switch {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 3px;
+}
+
+body:has(#theme-toggle:checked) {
+    --bg-light: #171714;
+    --text-dark: #f2eee5;
+    --text-muted: #c6c1b6;
+    --surface-white: #22221e;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+body:has(#theme-toggle:checked) .navbar {
+    background-color: rgba(29, 29, 26, 0.96);
+}
+
+body:has(#theme-toggle:checked) .story-section,
+body:has(#theme-toggle:checked) .menu-section,
+body:has(#theme-toggle:checked) .menu-item-card,
+body:has(#theme-toggle:checked) .card-details {
+    background-color: var(--surface-white);
+}
+
+body:has(#theme-toggle:checked) .experience-bar {
+    background-color: #111310;
+    color: #f2eee5;
+}
+
+/* Ensure headings that were dark in light mode remain readable. */
+body:has(#theme-toggle:checked) h2,
+body:has(#theme-toggle:checked) h3,
+body:has(#theme-toggle:checked) h4 {
+    color: #f2eee5;
+}
+
+body:has(#theme-toggle:checked) .stat-node h3 {
+    color: var(--accent-gold);
+}
+
+body:has(#theme-toggle:checked) .story-text p,
+body:has(#theme-toggle:checked) .menu-intro,
+body:has(#theme-toggle:checked) .item-desc {
+    color: var(--text-muted);
+}
+
 /* --- Fine Typography & Color Architecture --- */
 * {
     margin: 0;
