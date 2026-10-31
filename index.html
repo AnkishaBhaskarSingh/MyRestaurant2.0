@@ -3,84 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BiteExpress | Delicious Fast Food</title>
+    <title>Indique | Fine Dining</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Aesthetic Header Navigation -->
     <header class="navbar">
-        <div class="logo">Bite<span>Express</span></div>
+        <div class="logo"><span>Indique</span></div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#curated-menu">The Menu</a></li>
+                <li><a href="#experience">The Experience</a></li>
+                <li><a href="#reservation">Contact</a></li>
             </ul>
         </nav>
-        <a href="#menu" class="btn-order">Order Now</a>
+        <a href="#reservation" class="btn-reserve">Book Table</a>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Visual Hero Layer -->
     <section id="home" class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Craving Something <br><span>Delicious?</span></h1>
-            <p>Fresh ingredients, fast delivery, and unbeatable taste. Satisfy your hunger in just a few clicks.</p>
-            <a href="#menu" class="btn-main">Explore Menu</a>
-        </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section id="menu" class="menu-section">
-        <h2>Our Best <span>Sellers</span></h2>
-        <div class="menu-grid">
-            <!-- Item 1 -->
-            <div class="menu-card">
-                <div class="food-img-placeholder">🍔</div>
-                <h3>Classic Cheeseburger</h3>
-                <p>Juicy beef patty, melted cheddar cheese, fresh lettuce, and our secret sauce.</p>
-                <div class="card-footer">
-                    <span class="price">$8.99</span>
-                    <button class="btn-add">Add</button>
-                </div>
-            </div>
-            <!-- Item 2 -->
-            <div class="menu-card">
-                <div class="food-img-placeholder">🍕</div>
-                <h3>Pepperoni Pizza</h3>
-                <p>Crispy crust loaded with rich tomato sauce, mozzarella, and spicy pepperoni.</p>
-                <div class="card-footer">
-                    <span class="price">$12.99</span>
-                    <button class="btn-add">Add</button>
-                </div>
-            </div>
-            <!-- Item 3 -->
-            <div class="menu-card">
-                <div class="food-img-placeholder">🍟</div>
-                <h3>French Fries</h3>
-                <p>Golden, crispy, and perfectly salted potato fries served with garlic mayo.</p>
-                <div class="card-footer">
-                    <span class="price">$3.99</span>
-                    <button class="btn-add">Add</button>
-                </div>
+            <span class="sub-tag">ESTABLISHED 2026</span>
+            <h1>Crafting Culinary <br>Moments</h1>
+            <p>Experience an intentional blend of organic seasonal ingredients, contemporary techniques, and timeless Indian hospitality.</p>
+            <div class="hero-buttons">
+                <a href="#curated-menu" class="btn-dark">View Menu</a>
+                <a href="#story" class="btn-outline">Our Story</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <h2>Why Choose <span>Us?</span></h2>
-            <p>Founded in 2024, BiteExpress brings premium quality fast food straight to your doorstep. We partner with local farmers to ensure every burger, pizza, and fry is made with the freshest ingredients possible.</p>
+    <!-- Story/Feature Section (Expanded Section) -->
+    <section id="story" class="story-section">
+        <div class="story-grid">
+            <div class="story-text">
+                <span class="section-badge">PHILOSOPHY</span>
+                <h2>Sourced from Earth. Engineered with Passion.</h2>
+                <p>We believe that exceptional dining is a conversation between nature and the chef. Every ingredient is gathered daily from local sustainable farms located within a 50-mile radius of our kitchen floor.</p>
+                <p class="accent-paragraph">No shortcuts. No synthetic elements. Simply raw, elevated flavors curated by hand.</p>
+            </div>
+            <div class="story-image-box">
+                <!-- Fallback background applied via CSS if local file is missing -->
+                <img src="images/hero-bg.jpg" alt="Our Kitchen Philosophy" class="fluid-img">
+            </div>
         </div>
     </section>
 
-    <!-- Footer & Contact -->
-    <footer id="contact">
-        <div class="footer-content">
-            <p>&copy; 2026 BiteExpress Fast Food. All rights reserved.</p>
-            <p>📍 123 Foodie Street, Flavor Town | 📞 +1 234 567 890</p>
+    <!-- Aesthetic Menu Section -->
+    <section id="curated-menu" class="menu-section">
+        <span class="section-badge center">SIGNATURE SELECTION</span>
+        <h2>Curated Creations</h2>
+        <p class="menu-intro">A precise selection designed to guide your palate through rich textures and delicate modern aromatics.</p>
+        
+        <div class="aesthetic-grid">
+            <!-- Dish 1 -->
+            <div class="menu-item-card">
+                <div class="image-wrapper">
+                    <img src="images/plate1.jpg" alt="Spicy Chicken Tikka" class="food-image">
+                    <span class="tag-badge">Chef's Choice</span>
+                </div>
+                <div class="card-details">
+                    <div class="title-row">
+                        <h3>Spicy Chicken Tikka</h3>
+                        <span class="item-price">₹450</span>
+                    </div>
+                    <p class="item-desc">Dark, chargrilled spice-marinated pieces, grilled to perfection served over a creamy base, garnished with coriander.</p>
+                </div>
+            </div>
+
+            <!-- Dish 2 -->
+            <div class="menu-item-card">
+                <div class="image-wrapper">
+                    <img src="images/plate2.jpg" alt="Appetisers Mezze Platter" class="food-image">
+                </div>
+                <div class="card-details">
+                    <div class="title-row">
+                        <h3>Appetisers Mezze Pltter</h3>
+                        <span class="item-price">₹850</span>
+                    </div>
+                    <p class="item-desc">An assortment of appetisers, including- Roasted potatoes, Grilled meat, Chickpea salad, falafel and many more.</p>
+                </div>
+            </div>
+
+            <!-- Dish 3 -->
+            <div class="menu-item-card">
+                <div class="image-wrapper">
+                    <img src="images/plate3.jpg" alt="Berry Pavlovas" class="food-image">
+                    <span class="tag-badge">Dessert</span>
+                </div>
+                <div class="card-details">
+                    <div class="title-row">
+                        <h3>Berry Pavlovas</h3>
+                        <span class="item-price">₹650</span>
+                    </div>
+                    <p class="item-desc">Delicate layers of crisp pastry topped with fluffy whipped cream, fresh strawberries and seasonal berries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Brand Value Block -->
+    <section id="experience" class="experience-bar">
+        <div class="stat-node">
+            <h3>100%</h3>
+            <p>Organic Sourced</p>
+        </div>
+        <div class="stat-node">
+            <h3>25+</h3>
+            <p>Signature Dishes</p>
+        </div>
+        <div class="stat-node">
+            <h3>Zero</h3>
+            <p>Single-Use Plastics</p>
+        </div>
+    </section>
+
+    <!-- Premium Footer & Contact Information -->
+    <footer id="reservation">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>Indique</h2>
+                <p>Elevating the art of slow dining since 2026.</p>
+            </div>
+            <div class="footer-hours">
+                <h4>Hours of Operation</h4>
+                <p>Tuesday — Sunday: 5:00 PM - 11:00 PM</p>
+                <p>Monday: Rest Period</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Reservations</h4>
+                <p>📍 E-4 Arera Colony, Bhopal, MP</p>
+                <p>✉️ concierge@indiquedining.com</p>
+            </div>
+        </div>
+        <div class="footer-baseline">
+            <p>&copy; 2026 Indique Fine Dining Restaurant. All rights reserved.</p>
         </div>
     </footer>
 
